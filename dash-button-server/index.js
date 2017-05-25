@@ -1,5 +1,4 @@
 const dashButton = require('node-dash-button');
-const config = require('../config');
 
 const dashButtons = [
   {
