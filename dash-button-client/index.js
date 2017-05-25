@@ -1,5 +1,11 @@
-var svr = new Server(),
-  tide   = new DashButton("12:34:56:78:90:12", function () { console.log("Tide pressed"); });
+const WebSocket = require('ws');
 
-svr.register(tide)
-  .start("192.168.1.10");
+const ws = new WebSocket('ws://192.168.0.45');
+
+ws.on('open', () => {
+  console.log('connection open');
+});
+
+ws.on('message', (data) => {
+  console.log('MESSAGE!', data);
+});

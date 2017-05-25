@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash button test</title>
+</head>
+<body>
+<h1>No dash button clicked</h1>
+<script>
+  const ws = new WebSocket('ws://192.168.0.45');
+  let timeout;
+  ws.onmessage = (e) => {
+    document.querySelector('h1').innerText = e.data + '!!';
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      document.querySelector('h1').innerText = 'No dash button clicked';
+    }, 5000);
+  }
+</script>
+</body>
+</html>
