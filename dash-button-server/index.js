@@ -21,7 +21,7 @@ const dashButtons = [
 ];
 
 
-dashButton(dashButtons.map(button => button.address)).on('detected', (address) => {
+dashButton(dashButtons.map(button => button.address), null, null, 'all').on('detected', (address) => {
   const button = dashButtons.find(button => button.address === address);
   console.log('press detected!', address, button.brand);
 });
