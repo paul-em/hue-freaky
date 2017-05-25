@@ -25,10 +25,17 @@ const dashButtons = [
 
 dashButton(dashButtons.map(button => button.address), null, null, 'all').on('detected', (address) => {
   const button = dashButtons.find(button => button.address === address);
-  console.log('press detected!', address, button.brand);
+  console.log(new Date(), 'press detected!', address, button.brand);
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {
       client.send(button.brand);
     }
   })
+});
+
+wss.on('connection', (ws) => {
+  console.log(new Date(), 'client connected');
+  ws.on('close', () => {
+    console.log(new Date(), 'client disconnected');
+  });
 });
