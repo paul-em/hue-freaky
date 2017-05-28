@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://192.168.0.45');
+const ws = new WebSocket('ws://192.168.1.2');
 
 ws.on('open', () => {
   console.log('connection open');
