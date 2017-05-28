@@ -1,7 +1,7 @@
 const five = require('johnny-five');
 const board = new five.Board();
 
-board.on('ready', () => {
+board.on('ready', function ready() {
   const leftServo = new five.Servo({
     pin: 9,
     center: true
