@@ -1,5 +1,5 @@
 const five = require('johnny-five');
-const board = new five.Board();
+const board = new five.Board({port: 'COM5'});
 
 board.on('ready', function ready() {
   const leftServo = new five.Servo({
