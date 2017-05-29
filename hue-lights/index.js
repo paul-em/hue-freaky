@@ -1,7 +1,7 @@
 const hue = require('node-hue-api');
 
-const host = '192.168.0.6';
-const user = '08a902b95915cdd9b75547cb50892dc4';
+const host = '192.168.1.6';
+const user = 'E7pLjjynbsOgscZSx-oBGhzbhEWfXxuynvQFn8g3';
 const light = 2;
 
 const api = new hue.HueApi(host, user);
