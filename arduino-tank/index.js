@@ -1,5 +1,5 @@
 const five = require('johnny-five');
-const board = new five.Board({ port: 'COM8' });
+const board = new five.Board({ port: 'COM7' });
 
 const motorConfigs = five.Motor.SHIELD_CONFIGS.ADAFRUIT_V1;
 
