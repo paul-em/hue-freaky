@@ -7,7 +7,7 @@
 <body>
 <h1>No dash button clicked</h1>
 <script>
-  const ws = new WebSocket('ws://192.168.1.2');
+  const ws = new WebSocket('ws://192.168.1.4');
   let timeout;
   ws.onmessage = (e) => {
     document.querySelector('h1').innerText = e.data + '!!';
